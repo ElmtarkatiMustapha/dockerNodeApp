@@ -1,0 +1,10 @@
+version: "3"
+services: 
+  node-app:
+    build: 
+      context: .
+      target: developement
+    volumes:
+      - ./src:/AppTest/src:ro
+    environment: 
+      - NODE_ENV=developement
