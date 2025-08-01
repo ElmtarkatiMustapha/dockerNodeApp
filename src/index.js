@@ -14,7 +14,7 @@ mongoose.connect(URI).then(()=>{
 })
 
 app.get("/",(req,res)=>{
-    res.send(`<h1>Hello every body from aws mode</h1>`)
+    res.send(`<h1>Hello every body from aws mode using docker hub</h1>`)
 })
 
 app.listen(4000, ()=>{
