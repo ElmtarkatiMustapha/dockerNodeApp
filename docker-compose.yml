@@ -1,12 +1,9 @@
 version: "3"
 services: 
   node-app:
-    container_name: express-node-app-container
     image: elmtarkati/nodeapp
     env_file: 
       - ./.env
-    ports:
-      - "4000:4000"
     depends_on: 
       - mongo
   mongo:

@@ -1,5 +1,6 @@
 const express = require("express")
 const mongoose = require("mongoose")
+const os = require("os")
 const app = express()
 
 const DB_USER = "root"
@@ -10,11 +11,12 @@ const URI = `mongodb://${DB_USER}:${DB_PASSWORD}@${DB_HOST}:${DB_PORT}`
 mongoose.connect(URI).then(()=>{
     console.log("connect to database....")
 }).catch(err=>{
-    console.log("feild to connect"+err)
+    console.log("faild to connect"+err)
 })
 
 app.get("/",(req,res)=>{
-    res.send(`<h1>Hello every body from aws mode using docker hub</h1>`)
+    console.log("trafic from :"+os.hostname)
+    res.send(`<h1>Hello every body </h1>`)
 })
 
 app.listen(4000, ()=>{
