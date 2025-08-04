@@ -16,7 +16,7 @@ mongoose.connect(URI).then(()=>{
 
 app.get("/",(req,res)=>{
     console.log("trafic from :"+os.hostname)
-    res.send(`<h1>Hello every body </h1>`)
+    res.send(`<h1>Hello every body hhhhhh</h1>`)
 })
 
 app.listen(4000, ()=>{
